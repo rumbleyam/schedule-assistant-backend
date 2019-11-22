@@ -1,0 +1,24 @@
+{
+  "connection": "default",
+  "collectionName": "members",
+  "info": {
+    "name": "member",
+    "description": "Member of an organization.  Appointments can be scheduled with members."
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "organization": {
+      "model": "organization"
+    }
+  }
+}

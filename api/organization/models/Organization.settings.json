@@ -1,0 +1,26 @@
+{
+  "connection": "default",
+  "collectionName": "organizations",
+  "info": {
+    "name": "organization",
+    "description": "Every User must belong to a single organization"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "users": {
+      "collection": "user",
+      "via": "organization",
+      "plugin": "users-permissions"
+    }
+  }
+}
